@@ -1,105 +1,86 @@
-# ml-01
+# 🏡 Machine Learning Lab 1: Linear Regression  
 
-## Overview
-Businesses and organizations often need to understand the relationships between different factors to make better decisions.
-For example, a company may want to predict the fuel efficiency of a car based on its weight and engine size or estimate home prices based on square footage and location.
-Regression analysis helps identify and quantify these relationships between numerical features, providing insights that can be used for forecasting and decision-making.
-
-This project demonstrates your ability to apply regression modeling techniques to a real-world dataset. You will:
-- Load and explore a dataset.
-- Choose and justify features for predicting a target variable.
-- Train a regression model and evaluate performance.
-- Compare multiple regression approaches.
-- Document your work in a structured Jupyter Notebook.
-
-## Dataset 
-Housing Prices Dataset (Predict home values based on features like square footage and location)  
-- We use the built-in dataset from scikit-learn:  
-   - `from sklearn.datasets import fetch_california_housing`  
-- Additional dataset available on Kaggle:  
-   - [Kaggle Housing Prices](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)  
-
-## Python Library for Machine Learning: scikit-learn
-We use scikit-learn, built on NumPy, SciPy, and matplotlib
-   - Read more at <https://scikit-learn.org/>
-   - Scikit-learn supports classification, regression, and clustering.
-   - This project applies regression.
-
-**Important:** Use a 2-step installation to avoid timeouts and partial installs:  
-1. **First Install:** Install from `requirements.txt` with `scikit-learn` commented out.  
-2. **Second Install:** Uncomment `scikit-learn` and rerun the install command.
+📌 **GitHub Repo:** [Applied ML Prince](https://github.com/don4ye/applied-ml-prince)  
+👤 **Author:** Prince  
+📅 **Date:** 03/11/2025  
+🎯 **Objective:** Predict California house prices using **Median Income (`MedInc`)** and **Average Rooms (`AveRooms`)**.
 
 ---
 
-## Professional Python Setup and Workflow
-We follow professional Python practices. 
-Full instructions are available at <https://github.com/denisecase/pro-analytics-01/>. 
-A concise version is provided at [WORKFLOW_GUIDE.md](./docs/WORKFLOW_GUIDE.md)
+## 📂 Project Overview  
 
-**Important:** VS Code + Pylance may fail to recognize installed packages in Jupyter notebooks.  
-See the above guides for troubleshooting and solutions.  
+Businesses and organizations often need to understand relationships between different factors to make better decisions.  
+Regression analysis helps identify and quantify these relationships, providing insights for **forecasting and decision-making**.  
 
----
-
-## Project Outline
-Machine learning projects follow a structured approach.
-We will use this approach throughout the course. 
-
-Start your notebook professionally with:
-- a single top-level title
-- your name (or alias)
-- the date
-- a brief introduction that describes the problem and the dataset.
-- Import the external Python libraries used (e.g., pandas, numpy, matplotlib, seaborn, sklearn, etc.)
-
-Present your work in clearly numbered second-level and third-level headings
-
-### Section 1. Load and Explore the Data
-- 1.1 Load the dataset and display the first 10 rows.
-- 1.2 Check for missing values and display summary statistics.
-
-Analysis: What do you notice about the dataset? Are there any data issues?
-
-### Section 2. Visualize Feature Distributions
-- 2.1 Create histograms, boxplots, and scatterplots.
-- 2.2 Identify patterns or anomalies in feature distributions.
-
-Analysis: What patterns or anomalies do you see? Do any features stand out?
-
-### Section 3. Feature Selection and Justification
-- 3.1 Choose two input features for predicting the target.
-- 3.2 Justify your selection with reasoning.
-
-Analysis: Why did you choose these features? How might they impact predictions?
-
-### Section 4. Train a Linear Regression Model
-- 4.1 Define X (features) and y (target).
-- 4.2 Train a Linear Regression model using Scikit-Learn.
-- 4.3 Report R^2, MAE, RMSE.
-
-Analysis: How well did the model perform? Any surprises in the results?
-
-See [EXAMPLE_ANALYSIS](./docs/EXAMPLE_ANALYSIS.md) for more.
+This project demonstrates **regression modeling techniques** applied to a real-world dataset:  
+✅ **Dataset:** **California Housing Prices** (Scikit-learn's `fetch_california_housing`)  
+✅ **Goal:** Predict home values based on features like **income level** and **average rooms per household**.  
 
 ---
 
-## README.md (Required)
+## 🚀 Steps Followed  
 
-Include a professional README.md. Include:
-- a personalized title
-- an introduction to your project
-- a clickable link to your notebook file.
-- Instructions on how to set up your virtual environment and run your notebook locally.
-   
-If starting with an assignment README, remove the parts you do not need to present your project.
+✅ **1. Load & Explore Dataset**  
+✅ **2. Data Visualization (Histograms, Boxplots, Scatter Plots)**  
+✅ **3. Feature Selection (`MedInc` and `AveRooms`)**  
+✅ **4. Train/Test Split (80% Training, 20% Testing)**  
+✅ **5. Train a Linear Regression Model**  
+✅ **6. Evaluate Performance (R², MAE, RMSE)**  
+✅ **7. Save the Trained Model (`linear_regression_model.pkl`)**  
+
 ---
 
-## Repository Checklist
+## 📊 Results  
 
-Verify your repository contains:
+📌 **Model Performance Metrics:**  
 
-- [ ] Useful .gitignore (that keeps .venv out of GitHub)
-- [ ] Professional Jupyter Notebook with numbered sections   
-- [ ] Useful README.md
-- [ ] Useful requirements.txt
+| Metric  | Value |
+|---------|-------|
+| **R² Score** | 0.46 |
+| **Mean Absolute Error (MAE)** | 0.6247 |
+| **Root Mean Squared Error (RMSE)** | 0.8379 |
 
+- **R² = 0.46** → The model explains **46% of the variance** in house prices.  
+- **Lower RMSE (0.84) and MAE (0.62)** indicate that predictions are somewhat close but can be improved.  
+
+---
+
+## 📌 Dataset  
+
+### **California Housing Dataset**  
+We use the built-in **Scikit-learn dataset**:  
+
+```python
+from sklearn.datasets import fetch_california_housing
+
+data = fetch_california_housing(as_frame=True)
+data_frame = data.frame
+
+
+## 🔧 How to Run This Project  
+
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/don4ye/applied-ml-prince.git
+cd applied-ml-prince
+
+### 2️⃣ Install Dependencies  
+```bash
+pip install -r requirements.txt
+
+### 3️⃣ Open Jupyter Notebook  
+```bash
+jupyter notebook
+
+## 📁 Files Included  
+
+| File | Description |
+|------|------------|
+| **ml01.ipynb** | Jupyter Notebook with all analysis and model training. |
+| **linear_regression_model.pkl** | Saved trained model for future use. |
+| **README.md** | This project documentation. |
+| **requirements.txt** | List of required Python packages. |
+
+## 🔗 GitHub Repository  
+
+📌 **[Applied ML Prince](https://github.com/don4ye/applied-ml-prince)**
