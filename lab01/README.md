@@ -84,3 +84,4 @@ jupyter notebook
 ## 🔗 GitHub Repository  
 
 📌 **[Applied ML Prince](https://github.com/don4ye/applied-ml-prince)**
+.
