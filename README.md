@@ -9,20 +9,24 @@
 
 ## 📂 Project Overview  
 
-This project applies **Linear Regression** to predict housing prices based on two key features from the **California Housing Dataset** (provided by Scikit-learn).  
-The dataset contains various **housing-related attributes**, including income levels and the number of rooms per household.
+Businesses and organizations often need to understand relationships between different factors to make better decisions.  
+Regression analysis helps identify and quantify these relationships, providing insights for **forecasting and decision-making**.  
+
+This project demonstrates **regression modeling techniques** applied to a real-world dataset:  
+✅ **Dataset:** **California Housing Prices** (Scikit-learn's `fetch_california_housing`)  
+✅ **Goal:** Predict home values based on features like **income level** and **average rooms per household**.  
 
 ---
 
 ## 🚀 Steps Followed  
 
-✅ **1. Data Loading & Exploration**  
+✅ **1. Load & Explore Dataset**  
 ✅ **2. Data Visualization (Histograms, Boxplots, Scatter Plots)**  
 ✅ **3. Feature Selection (`MedInc` and `AveRooms`)**  
 ✅ **4. Train/Test Split (80% Training, 20% Testing)**  
-✅ **5. Model Training (Linear Regression)**  
-✅ **6. Model Evaluation (R², MAE, RMSE)**  
-✅ **7. Model Saving (`linear_regression_model.pkl`)**  
+✅ **5. Train a Linear Regression Model**  
+✅ **6. Evaluate Performance (R², MAE, RMSE)**  
+✅ **7. Save the Trained Model (`linear_regression_model.pkl`)**  
 
 ---
 
@@ -37,9 +41,21 @@ The dataset contains various **housing-related attributes**, including income le
 | **Root Mean Squared Error (RMSE)** | 0.8379 |
 
 - **R² = 0.46** → The model explains **46% of the variance** in house prices.  
-- **Lower RMSE (0.84) and MAE (0.62)** indicate that predictions are somewhat close but can be improved.
+- **Lower RMSE (0.84) and MAE (0.62)** indicate that predictions are somewhat close but can be improved.  
 
 ---
+
+## 📌 Dataset  
+
+### **California Housing Dataset**  
+We use the built-in **Scikit-learn dataset**:  
+
+```python
+from sklearn.datasets import fetch_california_housing
+
+data = fetch_california_housing(as_frame=True)
+data_frame = data.frame
+
 
 ## 🔧 How to Run This Project  
 
