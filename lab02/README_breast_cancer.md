@@ -35,5 +35,10 @@ We clean the data, perform exploratory data analysis (EDA), and train a **Logist
 1. Clone this repository:  
    ```bash
    git clone <https://github.com/don4ye/applied-ml-prince>
-   
+
+   2. Install dependencies:
+pip install pandas numpy seaborn scikit-learn matplotlib  
+
+3. Open the Jupyter Notebook and run the cells step by step.
+
   
